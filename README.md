@@ -10,4 +10,4 @@ For this assignment, I modified starter code to create an application that gener
 
 ### Link to deployed website
 
-https://pmgirardi.github.io/Portfolio/
+https://pmgirardi.github.io/Random_Password_Generator/
