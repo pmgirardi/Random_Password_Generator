@@ -6,7 +6,7 @@ For this assignment, I modified starter code to create an application that gener
 
 ### Screenshot
 
-![Deployed Website](/assets/images/Screen%20Shot%202022-12-16%20at%208.43.20%20AM.png) 
+![Deployed Website](assets/images/random_password_generator.gif) 
 
 ### Link to deployed website
 
