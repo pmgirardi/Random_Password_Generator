@@ -19,21 +19,18 @@ function generatePassword() {
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var numbersList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var specialCharacters = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
-  
-  // empty array
    
-  var equalsValue = [];
   var userValue = [];
+  var equalsValue = [];
   
   upperCase [1]
 
-
 // Prompt for user to confirm password criteria
-  var promptCharacter = prompt ("How many characters do you want between 8 and 128?");
-  var numbers = confirm ("Numbers in your password?");
-  var uppercases = confirm ("Uppercases in your password?");
-  var lowercases = confirm ("Lowercases in your password?");
-  var characters = confirm ("Special characters in your password?");
+  var promptCharacter = prompt ("Between 8 and 128, how many characters do you want your password to be?");
+  var numbers = confirm ("Do you want numbers in your password?");
+  var uppercases = confirm ("Do you want uppercases in your password?");
+  var lowercases = confirm ("Do you want lowercases in your password?");
+  var characters = confirm ("Do you want special characters in your password?");
 
 // If statements to add conditions of array
 if (numbers){
