@@ -9,7 +9,7 @@ function generatePassword() {
 
   // 1. Prompt the user for the password criteria:
   // - Password length needs to be at least 8 characters and no more than 128 characters.
-  // - Needs to include lower and upper case and special characters.
+  // - Needs to include lower and upper case and special characters.✔
   // 2. Ensure the input is valid.
   // 3. Display generatePassword on the page.
 
@@ -20,6 +20,51 @@ var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
 
+var resultArray = [];
+var userArray = [];
+
+// Prompt for user to confirm password criteria
+var numberCharacter = prompt ("How many characters would you like your password? Choose between 8 and 128?");
+var numbers = confirm ("Will this contain numbers?");
+var uppercase = confirm ("Will this contain Uppercase letters?");
+var lowercase = confirm ("Will this contain Lowercase letters?");
+var specialCharacters = confirm ("Will this contain special characters?");
+}
+
+// If statements to add conditions of array
+if (numbers){
+  resultArray = resultArray.concat(uppercase);
+  
+}
+if (uppercases){
+  resultArray = resultArray.concat(lowercase);
+
+}
+if (lowercases){
+  resultArray = resultArray.concat(numbers);
+
+}
+
+if (characters){
+  resultArray = resultArray.concat(specialCharacters);
+}
+console.log(resultArray)
+
+var password = [];
+
+//Added for-loop to run over array
+
+for (var i = 0; i < enter; i++) {
+  var userArray = choices[Math.floor(Math.random() * choices.length)];
+  password.push(userArray);
+}
+
+var ps = password.join("");
+UserInput(ps);
+return ps;
+
+function UserInput(ps) {
+  document.getElementById("password").textContent = ps;
 
 }
 
