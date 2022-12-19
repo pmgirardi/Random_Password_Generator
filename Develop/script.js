@@ -15,57 +15,50 @@ function generatePassword() {
 
   // Used an array to define elements in variables of characters 
 
-var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialCharacters = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
+  var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var numbersList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var specialCharacters = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
+  
+  // empty array
+   
+  var equalsValue = [];
+  var userValue = [];
+  
+  upperCase [1]
 
-var resultArray = [];
-var userArray = [];
 
 // Prompt for user to confirm password criteria
-var numberCharacter = prompt ("How many characters would you like your password? Choose between 8 and 128?");
-var numbers = confirm ("Will this contain numbers?");
-var uppercase = confirm ("Will this contain Uppercase letters?");
-var lowercase = confirm ("Will this contain Lowercase letters?");
-var specialCharacters = confirm ("Will this contain special characters?");
-}
+  var promptCharacter = prompt ("How many characters do you want between 8 and 128?");
+  var numbers = confirm ("Numbers in your password?");
+  var uppercases = confirm ("Uppercases in your password?");
+  var lowercases = confirm ("Lowercases in your password?");
+  var characters = confirm ("Special characters in your password?");
 
 // If statements to add conditions of array
 if (numbers){
-  resultArray = resultArray.concat(uppercase);
-  
+  equalsValue = equalsValue.concat(numbersList); 
 }
+
 if (uppercases){
-  resultArray = resultArray.concat(lowercase);
-
+  equalsValue = equalsValue.concat(upperCase);
 }
-if (lowercases){
-  resultArray = resultArray.concat(numbers);
 
+if (lowercases){
+  equalsValue = equalsValue.concat(lowerCase);
 }
 
 if (characters){
-  resultArray = resultArray.concat(specialCharacters);
+  equalsValue = equalsValue.concat(specialCharacters);
 }
-console.log(resultArray)
-
-var password = [];
+console.log(equalsValue);
 
 //Added for-loop to run over array
 
-for (var i = 0; i < enter; i++) {
-  var userArray = choices[Math.floor(Math.random() * choices.length)];
-  password.push(userArray);
-}
-
-var ps = password.join("");
-UserInput(ps);
-return ps;
-
-function UserInput(ps) {
-  document.getElementById("password").textContent = ps;
-
+for (var i = 0; i < promptCharacter; i++) {   
+  userValue.push (equalsValue[Math.floor(Math.random() * equalsValue.length)]); 
+  }
+  return userValue.join("") ;
 }
 
 // Write password to the #password input
